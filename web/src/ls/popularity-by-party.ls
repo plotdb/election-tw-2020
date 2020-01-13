@@ -66,7 +66,8 @@
               render!
           click: do
             "setparty": ({node}) ->
-              view.get(\party-select).value = lc.target = node.getAttribute \data-value
+              lc.target = value = node.getAttribute \data-value
+              view.getAll(\party-select).map -> it.value = value
               move!
               render!
 

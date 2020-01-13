@@ -117,9 +117,12 @@
         },
         click: {
           "setparty": function(arg$){
-            var node;
+            var node, value;
             node = arg$.node;
-            view.get('party-select').value = lc.target = node.getAttribute('data-value');
+            lc.target = value = node.getAttribute('data-value');
+            view.getAll('party-select').map(function(it){
+              return it.value = value;
+            });
             move();
             return render();
           }
