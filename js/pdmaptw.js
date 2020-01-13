@@ -59,9 +59,6 @@
           }).join('');
           return it.properties.name = pdmaptw.normalize(name);
         });
-        features = features.filter(function(it){
-          return it.properties.name !== "金門縣烏坵鄉";
-        });
         this$.lc.path = path = d3.geoPath().projection(pdmaptw.projection);
         return d3.select(root).append('svg').append('g').selectAll('path').data(features).enter().append('path').attr('d', path);
       });
