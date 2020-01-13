@@ -108,6 +108,9 @@
             var node;
             node = arg$.node;
             lc.target = node.value;
+            view.getAll('party-select').map(function(it){
+              return it.value = node.value;
+            });
             move();
             return render();
           }
@@ -136,7 +139,9 @@
         }
       }
     });
-    return view.get('party-select').value = "中華統一促進黨";
+    return view.getAll('party-select').map(function(it){
+      return it.value = "中華統一促進黨";
+    });
   }).then(function(){
     return render();
   });
