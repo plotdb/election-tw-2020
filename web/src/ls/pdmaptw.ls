@@ -24,6 +24,9 @@
             name = [meta.name[it.properties.c], meta.name[it.properties.t], meta.name[it.properties.v]]
               .filter(->it) .join('')
             it.properties.name = pdmaptw.normalize name
+          # workaround for windows firefox.
+          # windows firefox render this out of place, which then cause the map to scale incorrectly.
+          features = features.filter -> it.properties.name != "金門縣烏坵鄉"
           @lc.path = path = d3.geoPath().projection(pdmaptw.projection)
           d3.select(root).append(\svg).append(\g)
             .selectAll \path
