@@ -61,6 +61,7 @@
           input: do
             "party-select": ({node}) ->
               lc.target = node.value
+              view.getAll(\party-select).map -> it.value = node.value
               move!
               render!
           click: do
@@ -75,7 +76,7 @@
             handle: ({data, node}) ->
               node.innerText = data
               node.setAttribute \value, data
-      view.get \party-select .value = "中華統一促進黨"
+      view.getAll(\party-select).map -> it.value = "中華統一促進黨"
     .then ->
       render!
 )!
