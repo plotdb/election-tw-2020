@@ -1,0 +1,26 @@
+<!DOCTYPE html><html><head><link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"><link rel="stylesheet" type="text/css" href="assets/lib/ldui/ldui.min.css"><style>.legend {
+  padding: 0.25em;
+  position: absolute;
+  bottom: 1em;
+  left: 0.25em;
+  top: auto;
+  right: auto;
+}
+.label {
+  font-size: 0.875em;
+}
+.label .dot {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-left: 0.25em;
+}
+.label .name {
+  min-width: 3em;
+  text-align: right;
+  display: inline-block;
+  vertical-align: middle;
+}
+</style></head><body class="p-4"><div class="w-768 rwd mx-auto"><div class="text-center mb-1 py-3"><h1 class="mt-4 mb-0">2020 總統大選</h1><p class="text-muted">全國各鄉鎮藍綠總統 / 政黨票差距簡易分析<br><span class="text-sm">計算公式: 100% * (陣營政黨票 - 總統票) / 總統票</span></p></div><div class="row"><div class="col-md"><div class="text-center">藍營差距</div><div ld-scope="kmt"><div class="aspect-ratio" style="padding-top:130%"><div class="mx-auto shadow-sm w-100 h-100 border rounded" id="kmt"></div><div class="legend"><div class="label" ld-each="label"><div class="name"></div><div class="dot"></div></div></div></div></div></div><div class="col-md"><div class="text-center">綠營差距</div><div ld-scope="dpp"><div class="aspect-ratio" style="padding-top:130%"><div class="mx-auto shadow-sm w-100 h-100 border rounded" id="dpp"></div><div class="legend"><div class="label" ld-each="label"><div class="name"></div><div class="dot"></div></div></div></div></div></div></div><script type="text/javascript" src="https://d3js.org/d3.v4.js"></script><script type="text/javascript" src="https://d3js.org/topojson.v2.min.js"></script><script type="text/javascript" src="https://d3js.org/d3-color.v1.min.js"></script><script type="text/javascript" src="https://d3js.org/d3-interpolate.v1.min.js"></script><script type="text/javascript" src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script><script type="text/javascript" src="assets/lib/pdmap.tw/pdmaptw.js"></script><script type="text/javascript" src="assets/lib/ldui/ldui.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.1.0/papaparse.min.js"></script><script type="text/javascript" src="js/diff.js"></script></div></body></html>
