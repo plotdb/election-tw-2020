@@ -1,23 +1,26 @@
 doctype html
 html
   include /../../static/assets/lib/ldui/pug/ldui.pug
-  - og = {}
-  - rel = function(it) {return it;}
+  - 
+    var og = {
+      "title": "非典型大選分析",
+      "description": "2020 大選之各鄉鎮政黨支持狀況地圖視覺化",
+      "thumbnail": "https://plotdb.github.io/election-tw-2020/assets/img/thumbnail.png"
+    };
   head
     meta(charset="utf-8")
     meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1')
-    //-
-      title= og.title
-      meta(property="og:url", content=og.url)
-      meta(property="og:title", content=og.title)
-      meta(property="og:description", content=og.description)
-      meta(property="og:locale",content="zh_TW")
-      meta(property="og:image",content=og.thumbnail)
-      meta(property="og:image:type",content=og.thumbtype || "image/jpeg")
-      meta(property="og:image:width",content=og.thumbwidth || "1200")
-      meta(property="og:image:height",content=og.thumbheight || "630")
-      meta(property="og:type", content="website")
-      link(rel="icon",href=rel("favicon.ico"))
+    title= og.title
+    meta(property="og:url", content=og.url)
+    meta(property="og:title", content=og.title)
+    meta(property="og:description", content=og.description)
+    meta(property="og:locale",content="zh_TW")
+    meta(property="og:image",content=og.thumbnail)
+    meta(property="og:image:type",content=og.thumbtype || "image/jpeg")
+    meta(property="og:image:width",content=og.thumbwidth || "1200")
+    meta(property="og:image:height",content=og.thumbheight || "630")
+    meta(property="og:type", content="website")
+    link(rel="icon",href="favicon.ico")
 
     +css("assets/lib/bootstrap/4.3.1/bootstrap.min.css")
     +css("assets/lib/ldui/ldui.min.css")
@@ -137,11 +140,11 @@ html
         p author: #[a(href="https://github.com/zbryikt/") zbryikt]
       +nbr(2)
 
-      +script("/assets/lib/d3js/d3.v4.js")
-      +script("/assets/lib/d3js/topojson.v2.min.js")
-      +script("/assets/lib/d3js/d3-color.v1.min.js")
-      +script("/assets/lib/d3js/d3-interpolate.v1.min.js")
-      +script("/assets/lib/d3js/d3-scale-chromatic.v1.min.js")
+      +script("assets/lib/d3js/d3.v4.js")
+      +script("assets/lib/d3js/topojson.v2.min.js")
+      +script("assets/lib/d3js/d3-color.v1.min.js")
+      +script("assets/lib/d3js/d3-interpolate.v1.min.js")
+      +script("assets/lib/d3js/d3-scale-chromatic.v1.min.js")
 
       +script("assets/lib/pdmap.tw/pdmaptw.js")
       +script("assets/lib/ldui/ldui.min.js")
