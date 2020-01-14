@@ -10,6 +10,15 @@ html
     };
   head
     meta(charset="utf-8")
+
+    // Global site tag (gtag.js) - Google Analytics
+    script(async,src="https://www.googletagmanager.com/gtag/js?id=UA-77722201-2")
+    script.
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-77722201-2');
+
     meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1')
     title= og.title
     meta(property="og:url", content=og.url)
